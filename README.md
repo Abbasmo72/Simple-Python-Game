@@ -1,4 +1,8 @@
 بازی Bulls and Cows یک بازی فکری و حدسی است که معمولاً بین دو بازیکن انجام می‌شود. هدف این بازی این است که یک بازیکن با حدس زدن یک عدد یا کلمه که توسط بازیکن دیگر مخفی شده، آن را کشف کند. این بازی در اصل با اعداد انجام می‌شود، اما نسخه‌های مختلفی از آن وجود دارد که می‌توان با کلمات نیز بازی کرد.
+قوانین و نحوه‌ی بازی (نسخه‌ی عددی):
+انتخاب عدد مخفی: یکی از بازیکنان (یا سیستم) یک عدد چند رقمی مخفی می‌کند. این عدد باید شامل ارقام غیرتکراری باشد. معمولاً این عدد 4 رقمی است، اما می‌تواند 3 یا 5 رقمی هم باشد.
+
+حدس زدن: بازیکن دیگر سعی می‌کند عدد مخفی را با حدس زدن کشف کند. هر حدس باید به اندازه تعداد ارقام عدد مخفی باشد و تکراری نباشد.
 
 
 The game Bulls and Cows is a guessing and logical game typically played between two players. The goal of the game is for one player to guess a hidden number (or word) chosen by the other player. While the game is traditionally played with numbers, there are different versions that can be played with words as well.
