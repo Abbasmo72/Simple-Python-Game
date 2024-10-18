@@ -130,11 +130,12 @@ else:
 print(f'The number is a guess {count}') 
 ```
 
-5. Conclusion
-  This implementation of the Bulls and Cows game showcases several important programming concepts, such as:<br>
-Functions: Encapsulating behavior into reusable blocks.<br>
-Loops: Using loops to allow for repeated interaction until a condition is met.<br>
-Conditionals: Implementing conditional logic to guide the flow of the program based on user input and game rules.<br>
+5. Conclusion:
+   
+    This implementation of the Bulls and Cows game showcases several important programming concepts, such as:<br>
+	Functions: Encapsulating behavior into reusable blocks.<br>
+	Loops: Using loops to allow for repeated interaction until a condition is met.<br>
+	Conditionals: Implementing conditional logic to guide the flow of the program based on user input and game rules.
 
 ## Potential Improvements
 
