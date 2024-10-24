@@ -29,7 +29,6 @@ This structured approach to coding allows for easy understanding and extensibili
 
 ## How the Code Works (Step-by-Step Breakdown):
 The provided code implements a "Bulls and Cows" game where a player tries to guess a randomly generated four-digit number without repeating digits. Here’s a detailed analysis of how the code functions step by step:
-
 1. Import Required Module
 ```python
 import random
