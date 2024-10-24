@@ -43,7 +43,6 @@ def getDigits(num):
 ```
 Purpose: This function takes an integer num and converts it into a list of its individual digits.
 Functionality: The number is first converted to a string, allowing iteration over each character. Each character is then converted back to an integer and returned as a list. For example, if num is 1234, the function returns [1, 2, 3, 4].
-
 b. noDuplicates(num)
 ```python
 def noDuplicates(num): 
@@ -55,7 +54,6 @@ def noDuplicates(num):
 ```
 Purpose: This function checks whether a given number contains any duplicate digits.
 Functionality: It converts the number to a list of digits using getDigits(num) and then compares the length of this list to the length of the set created from it. Since sets cannot contain duplicates, a mismatch indicates duplicates exist. The function returns True if no duplicates are found, otherwise False.
-  
 c. generateNum()
 ```python
 def generateNum(): 
