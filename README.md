@@ -1,7 +1,6 @@
 <div align="center">
 
 # Game Cows Bulls
-
 <img src="https://i.pinimg.com/originals/5a/77/67/5a7767d8ce416e8bae383448cdcfadc4.gif" height="250px" width="500px">
 </div>
 <hr>
