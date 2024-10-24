@@ -40,6 +40,7 @@ The code begins by importing the random module, which is used to generate random
    The code contains several functions that serve distinct purposes:<br>
    
 <b>a. getDigits(num)</b>
+
  ```python
 def getDigits(num): 
     return [int(i) for i in str(num)]
@@ -48,6 +49,7 @@ Purpose: This function takes an integer num and converts it into a list of its i
 Functionality: The number is first converted to a string, allowing iteration over each character. Each character is then converted back to an integer and returned as a list. For example, if num is 1234, the function returns [1, 2, 3, 4].
 
 <b>b. noDuplicates(num)</b>
+ 
 ```python
 def noDuplicates(num): 
     num_li = getDigits(num) 
@@ -60,6 +62,7 @@ Purpose: This function checks whether a given number contains any duplicate digi
 Functionality: It converts the number to a list of digits using getDigits(num) and then compares the length of this list to the length of the set created from it. Since sets cannot contain duplicates, a mismatch indicates duplicates exist. The function returns True if no duplicates are found, otherwise False.
 
 <b>c. generateNum()</b>
+
 ```python
 def generateNum(): 
     while True: 
@@ -71,6 +74,7 @@ Purpose: This function generates a random four-digit number that has no repeated
 Functionality: It repeatedly generates a random integer between 1000 and 9999. For each generated number, it checks for duplicates using noDuplicates(num). Once a valid number is found, it returns that number.
 
 <b>d. numOfBullsCows(num, guess)</b>
+
   ```python
 def numOfBullsCows(num, guess): 
     bull_cow = [0, 0] 
