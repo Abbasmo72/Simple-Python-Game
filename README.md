@@ -29,21 +29,21 @@ This structured approach to coding allows for easy understanding and extensibili
 
 ## How the Code Works (Step-by-Step Breakdown):
 The provided code implements a "Bulls and Cows" game where a player tries to guess a randomly generated four-digit number without repeating digits. Here’s a detailed analysis of how the code functions step by step:
-1. Import Required Module
+1. <b>Import Required Module</b>
 ```python
 import random
 ```
 The code begins by importing the random module, which is used to generate random numbers.
-2. Function to Get Digits
+2. <b>Function to Get Digits</b>
    The code contains several functions that serve distinct purposes:<br>
-  a. getDigits(num)
+	<b>a. getDigits(num)</b>
  ```python
 def getDigits(num): 
     return [int(i) for i in str(num)]
 ```
 Purpose: This function takes an integer num and converts it into a list of its individual digits.
 Functionality: The number is first converted to a string, allowing iteration over each character. Each character is then converted back to an integer and returned as a list. For example, if num is 1234, the function returns [1, 2, 3, 4].
-b. noDuplicates(num)
+	<b>b. noDuplicates(num)</b>
 ```python
 def noDuplicates(num): 
     num_li = getDigits(num) 
@@ -54,7 +54,7 @@ def noDuplicates(num):
 ```
 Purpose: This function checks whether a given number contains any duplicate digits.
 Functionality: It converts the number to a list of digits using getDigits(num) and then compares the length of this list to the length of the set created from it. Since sets cannot contain duplicates, a mismatch indicates duplicates exist. The function returns True if no duplicates are found, otherwise False.
-c. generateNum()
+	<b>c. generateNum()</b>
 ```python
 def generateNum(): 
     while True: 
@@ -64,8 +64,7 @@ def generateNum():
 ```
 Purpose: This function generates a random four-digit number that has no repeated digits.
 Functionality: It repeatedly generates a random integer between 1000 and 9999. For each generated number, it checks for duplicates using noDuplicates(num). Once a valid number is found, it returns that number.
-
-  d. numOfBullsCows(num, guess)
+	<b>d. numOfBullsCows(num, guess)</b>
   ```python
 def numOfBullsCows(num, guess): 
     bull_cow = [0, 0] 
@@ -90,7 +89,7 @@ The function then iterates through the digits of both lists. For each digit, it 
 If a digit matches in both value and position, it is counted as a bull; if it matches in value only, it is counted as a cow.
 Finally, the function returns the counts of bulls and cows.
 
-3. Game Initialization
+3. <b>Game Initialization</b>
 ```python
 num = generateNum() 
 tries = int(input('Enter number of tries: ')) 
@@ -98,7 +97,7 @@ count = 0
 ```
 <b>Purpose:</b> The game begins by generating a secret number using generateNum(). The player is prompted to enter the number of attempts they wish to have to guess the number, and a counter (count) is initialized to keep track of the number of guesses made.
 
-4. Game Loop
+4. <b>Game Loop</b>
 ```python
 while tries > 0: 
     guess = int(input("Enter your guess: ")) 
@@ -124,7 +123,7 @@ else:
 print(f'The number is a guess {count}') 
 ```
 
-5. Conclusion:
+5. <b>Conclusion:</b>
    
     This implementation of the Bulls and Cows game showcases several important programming concepts, such as:<br>
 	Functions: Encapsulating behavior into reusable blocks.<br>
@@ -230,16 +229,3 @@ else:
 print(f'The number is a guess{count}')	
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
