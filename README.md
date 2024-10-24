@@ -13,7 +13,6 @@ The provided code implements a text-based version of the "Bulls and Cows" game, 
   The goal of the game is for the player to guess a randomly generated four-digit number with unique digits. The player receives feedback in the form of "bulls" and "cows":<br>
     <b>Bulls:</b> Digits that are correct and in the correct position.<br>
     <b>Cows:</b> Digits that are correct but in the wrong position.
-
 2. Key Functions:
   <b>bgetDigits(num)</b>: Converts a number into a list of its individual digits.<br>
   <b>noDuplicates(num):</b> Checks if the given number contains any duplicate digits.<br>
