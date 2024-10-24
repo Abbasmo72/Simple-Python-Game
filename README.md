@@ -96,6 +96,7 @@ If a digit matches in both value and position, it is counted as a bull; if it ma
 Finally, the function returns the counts of bulls and cows.
 
 3. <b>Game Initialization</b>
+
 ```python
 num = generateNum() 
 tries = int(input('Enter number of tries: ')) 
@@ -104,6 +105,7 @@ count = 0
 <b>Purpose:</b> The game begins by generating a secret number using generateNum(). The player is prompted to enter the number of attempts they wish to have to guess the number, and a counter (count) is initialized to keep track of the number of guesses made.
 
 4. <b>Game Loop</b>
+
 ```python
 while tries > 0: 
     guess = int(input("Enter your guess: ")) 
