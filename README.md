@@ -34,7 +34,6 @@ The provided code implements a "Bulls and Cows" game where a player tries to gue
 import random
 ```
 The code begins by importing the random module, which is used to generate random numbers.
-
 2. Function to Get Digits
    The code contains several functions that serve distinct purposes:<br>
   a. getDigits(num)
