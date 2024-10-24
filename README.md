@@ -45,7 +45,7 @@ def getDigits(num):
 Purpose: This function takes an integer num and converts it into a list of its individual digits.
 Functionality: The number is first converted to a string, allowing iteration over each character. Each character is then converted back to an integer and returned as a list. For example, if num is 1234, the function returns [1, 2, 3, 4].
 
-  b. noDuplicates(num)
+b. noDuplicates(num)
 ```python
 def noDuplicates(num): 
     num_li = getDigits(num) 
