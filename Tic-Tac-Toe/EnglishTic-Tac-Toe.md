@@ -35,10 +35,38 @@ This Python code implements a simple graphical user interface (GUI) for a Tic-Ta
 5. Main Loop:
    - The root.mainloop() starts the Tkinter event loop, allowing the GUI to respond to user actions and display updates.
 
-## Key Features
+### Key Features
   - The human player plays as 'X' and makes moves by clicking the buttons.
   - The AI plays as 'O' and automatically calculates its moves using the Minimax algorithm.
   - The game ends with a win message for either the player or the AI, or a draw message when the board is full without a winner.
   - Error handling is included to manage invalid moves.
 
 This implementation is a straightforward example of using a GUI to create an interactive game, showcasing both user interaction and basic AI logic.
+
+## How the Code Works (Step-by-Step Breakdown):
+
+1. Importing Libraries
+```python
+import tkinter as tk #provides a library of basic elements of GUI widgets
+from tkinter import messagebox #provides a different set of dialogues that are used to display message boxes
+import random
+```
+- <b>tkinter:</b> This library is used to create a graphical user interface (GUI) and its various elements.
+- <b>messagebox:</b> This module helps to display dialogues for showing messages to the user (such as win or error messages).
+- <b>random:</b> This module is used for randomization, although it is not utilized in the current code.
+
+2. Defining the check_winner Function
+```python
+def check_winner(board, player):
+    # Check rows, columns, and diagonals for a win
+    for i in range(3):
+        if all(board[i][j] == player for j in range(3)) or all(board[j][i] == player for j in range(3)):
+            return True
+    if all(board[i][i] == player for i in range(3)) or all(board[i][2 - i] == player for i in range(3)):
+        return True
+    return False
+```
+- This function checks whether the specified player (player, which can be 'X' or 'O') has won the game.
+- It uses two loops to check all rows and columns.
+- It also checks the two diagonals of the board.
+- If a winner is found, it returns True; otherwise, it returns False.
