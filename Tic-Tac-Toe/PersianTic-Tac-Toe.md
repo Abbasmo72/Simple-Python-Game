@@ -8,44 +8,45 @@
 [Click to see the descriptions in English language](EnglishTic-Tac-Toe.md)
 <hr>
 
-## بررسی اجمالی کد
-[کد پایتون](Tic-Tac-Toe/Tic-Tac-Toe.py)
 
-این کد پایتون یک رابط کاربری گرافیکی (GUI) برای بازی دوز (Tic-Tac-Toe) با استفاده از کتابخانه Tkinter پیاده‌سازی می‌کند. بازی به کاربر این امکان را می‌دهد که با یک رقیب هوش مصنوعی (AI) رقابت کند. در اینجا یک مرور کلی بر کد، با تقسیم‌بندی به اجزای کلیدی آورده شده است:
+
+## بررسی اجمالی کد
+[Python Code](Tic-Tac-Toe/Tic-Tac-Toe.py)
+
+این کد پایتون یک رابط کاربری گرافیکی ساده (GUI) را برای یک بازی Tic-Tac-Toe با استفاده از کتابخانه Tkinter پیاده سازی می کند. این بازی به یک بازیکن انسانی اجازه می دهد تا در برابر حریف هوش مصنوعی بازی کند. در اینجا یک نمای کلی از کد وجود دارد که به اجزای اصلی تقسیم شده است:
 
 1. واردات:
-   - کتابخانه tkinter: ابزارهایی برای ایجاد برنامه‌های GUI فراهم می‌کند.
-   - کتابخانه messagebox: دیالوگ‌هایی برای نمایش پیام‌ها به کاربر ارائه می‌دهد.
-   - کابخانه random: برای تصادفی‌سازی (که در این کد به‌طور خاص نیاز نیست) استفاده می‌شود.
-    
-2. توابع منطق بازی:
-   - تابع check_winner(board, player): این تابع بررسی می‌کند که آیا بازیکن مشخص (یا 'X' یا 'O') برنده بازی شده است یا خیر، با بررسی همه ردیف‌ها، ستون‌ها و قطرها.
-   - تابع is_board_full(board): بررسی می‌کند که آیا جدول پر است (هیچ فضایی خالی نیست) تا تعیین کند آیا بازی به تساوی کشیده شده است یا خیر.
-   - تابع minimax(board, depth, is_maximizing): الگوریتم Minimax را پیاده‌سازی می‌کند، که یک تابع بازگشتی است که وضعیت جدول را برای تصمیم‌گیری بهترین حرکت برای هوش مصنوعی ارزیابی می‌کند. این تابع نمراتی را بر اساس برد، باخت یا تساوی برمی‌گرداند.
-   - تابع ممکن با استفاده از الگوریتم Minimax تعیین کرده و موقعیت حرکت بهینه را برمی‌گرداند.
-     
+   - <b>tkinter:</b> ابزارهایی را برای ایجاد برنامه های رابط کاربری گرافیکی فراهم می کند.
+   - <b>messagebox:</b> کادرهای محاوره ای را برای نمایش پیام ها به کاربر ارائه می دهد.
+   - <b>تصادفی:</b> برای تصادفی سازی استفاده می شود (در این کد به صراحت مورد نیاز نیست).
 
-4. Game Interaction Functions:
-   - <b>make_move(row, col):</b> Handles the player's move by updating the board and the GUI. It checks for a win or draw after the player's move and calls the AI's move if the game is still ongoing.
-   - <b>ai_move():</b> Executes the AI's move using the best_move() function, updates the board, and checks for a win or draw.
+2. توابع منطقی بازی:
+   - <b>check_winner(تخته، بازیکن):</b> این تابع با بررسی تمام سطرها، ستون‌ها و مورب‌ها بررسی می‌کند که آیا بازیکن مشخص شده (یا 'X' یا 'O') بازی را برده است.
+   - <b>is_board_full(board):</b> بررسی می‌کند که تخته پر است (بدون فضای خالی) تا مشخص کند بازی مساوی است یا خیر.
+   - <b>minimax(board, depth, is_maximizing):</b> الگوریتم Minimax را پیاده‌سازی می‌کند که یک تابع بازگشتی است که وضعیت تخته را ارزیابی می‌کند تا بهترین حرکت را برای هوش مصنوعی تعیین کند. بر اساس موقعیت‌های برد، باخت یا تساوی امتیازات را برمی‌گرداند.
+   - best_move(board): با ارزیابی تمام حرکات ممکن با استفاده از الگوریتم Minimax و برگرداندن موقعیت حرکت بهینه، بهترین حرکت را برای هوش مصنوعی تعیین می کند.
 
-5. GUI Setup:
-   - A Tkinter window is created with the title "Tic-Tac-Toe".
-   - A 3x3 board is initialized as a list of lists, representing empty spaces.
-   - Buttons are created for each cell in the grid, with a command that triggers the make_move function when clicked. Each button updates the GUI to show the current player's symbol ('X' for the human player, 'O' for the AI).
+3. توابع تعامل بازی:
+   - <b>make_move(row, col):</b> حرکت بازیکن را با به‌روزرسانی برد و رابط کاربری گرافیکی کنترل می‌کند. بعد از حرکت بازیکن، برد یا تساوی را بررسی می کند و اگر بازی همچنان ادامه دارد، حرکت هوش مصنوعی را فراخوانی می کند.
+   - <b>ai_move():</b> حرکت هوش مصنوعی را با استفاده از تابع best_move() اجرا می‌کند، تابلو را به‌روزرسانی می‌کند و پیروزی یا تساوی را بررسی می‌کند.
 
-6. Main Loop:
-   - The root.mainloop() starts the Tkinter event loop, allowing the GUI to respond to user actions and display updates.
+4. راه اندازی رابط کاربری گرافیکی:
+   - یک پنجره Tkinter با عنوان "Tic-Tac-Toe" ایجاد می شود.
+   - یک تابلو 3x3 به عنوان لیستی از لیست ها مقداردهی اولیه می شود که نشان دهنده فضاهای خالی است.
+   - دکمه هایی برای هر سلول در شبکه ایجاد می شود، با دستوری که با کلیک کردن، تابع make_move را فعال می کند. هر دکمه رابط کاربری گرافیکی را به روز می کند تا نماد پخش کننده فعلی را نشان دهد ("X" برای بازیکن انسانی، "O" برای هوش مصنوعی).
 
-### Key Features
-  - The human player plays as 'X' and makes moves by clicking the buttons.
-  - The AI plays as 'O' and automatically calculates its moves using the Minimax algorithm.
-  - The game ends with a win message for either the player or the AI, or a draw message when the board is full without a winner.
-  - Error handling is included to manage invalid moves.
+5. حلقه اصلی:
+   - root.mainloop() حلقه رویداد Tkinter را شروع می کند و به رابط کاربری گرافیکی اجازه می دهد تا به اقدامات کاربر پاسخ دهد و به روز رسانی ها را نمایش دهد.
 
-This implementation is a straightforward example of using a GUI to create an interactive game, showcasing both user interaction and basic AI logic.
+### ویژگی های کلیدی
+  - بازیکن انسان به عنوان "X" بازی می کند و با کلیک کردن روی دکمه ها حرکت می کند.
+  - هوش مصنوعی به عنوان "O" بازی می کند و به طور خودکار حرکات خود را با استفاده از الگوریتم Minimax محاسبه می کند.
+  - بازی با یک پیام برد برای بازیکن یا هوش مصنوعی یا یک پیام تساوی زمانی که تخته بدون برنده پر است به پایان می رسد.
+  - مدیریت خطا برای مدیریت حرکات نامعتبر گنجانده شده است.
 
-## How the Code Works (Step-by-Step Breakdown):
+این پیاده سازی یک مثال ساده از استفاده از رابط کاربری گرافیکی برای ایجاد یک بازی تعاملی است که هم تعامل کاربر و هم منطق اولیه هوش مصنوعی را به نمایش می گذارد.
+
+## چگونه کد کار می کند (تجزیه گام به گام):
 
 1. Importing Libraries
 ```python
@@ -53,11 +54,11 @@ import tkinter as tk #provides a library of basic elements of GUI widgets
 from tkinter import messagebox #provides a different set of dialogues that are used to display message boxes
 import random
 ```
-   - <b>tkinter:</b> This library is used to create a graphical user interface (GUI) and its various elements.
-   - <b>messagebox:</b> This module helps to display dialogues for showing messages to the user (such as win or error messages).
-   - <b>random:</b> This module is used for randomization, although it is not utilized in the current code.
+   - <b>tkinter:</b> این کتابخانه برای ایجاد یک رابط کاربری گرافیکی (GUI) و عناصر مختلف آن استفاده می شود.
+   - <b>جعبه پیام:</b> این ماژول به نمایش دیالوگ ها برای نمایش پیام ها به کاربر (مانند پیام های برد یا خطا) کمک می کند.
+   - <b>تصادفی:</b> این ماژول برای تصادفی سازی استفاده می شود، اگرچه در کد فعلی استفاده نشده است.
 
-2. Defining the check_winner Function
+2. تعریف تابع check_winner
 ```python
 def check_winner(board, player):
     # Check rows, columns, and diagonals for a win
@@ -68,21 +69,20 @@ def check_winner(board, player):
         return True
     return False
 ```
-   - This function checks whether the specified player (player, which can be 'X' or 'O') has won the game.
-   - It uses two loops to check all rows and columns.
-   - It also checks the two diagonals of the board.
-   - If a winner is found, it returns True; otherwise, it returns False.
+   -این تابع پر بودن برد را بررسی می کند (یعنی فضای خالی وجود ندارد). 
+   - از لیست های تودرتو برای بررسی تمام سلول ها استفاده می کند.
+   - اگر تمام سلول ها پر شوند، True را برمی گرداند. در غیر این صورت، غلط را برمی گرداند.
 
-3. Defining the is_board_full Function
+4. تعریف تابع minimax
 ```python
 def is_board_full(board):
     return all(all(cell != ' ' for cell in row) for row in board)
 ```
-   - This function checks whether the board is full (meaning there are no empty spaces).
-   - It uses nested lists to check all cells.
-   - If all cells are filled, it returns True; otherwise, it returns False.
+   - این تابع پر بودن برد را بررسی می کند (یعنی فضای خالی وجود ندارد).
+   - از لیست های تودرتو برای بررسی تمام سلول ها استفاده می کند.
+   - اگر تمام سلول ها پر شوند، True را برمی گرداند. در غیر این صورت، False را برمی گرداند.
 
-4. Defining the minimax Function
+4. تعریف تابع minimax
 ```python
 def minimax(board, depth, is_maximizing):
     if check_winner(board, 'X'):
@@ -113,13 +113,13 @@ def minimax(board, depth, is_maximizing):
                     min_eval = min(min_eval, eval)
         return min_eval
 ```
-   - This function implements the Minimax algorithm used to compute the best move.
-   - It first checks if there is a winner and returns the corresponding score (-1 for 'X' and 1 for 'O').
-   - If the board is full, it returns a score of 0.
-   - If it is AI's turn (is_maximizing), it evaluates all possible moves to find the best score.
-   - If it is the human player's turn, it calculates the score for moves to minimize the score.
+   - این تابع الگوریتم Minimax مورد استفاده برای محاسبه بهترین حرکت را پیاده سازی می کند.
+   - ابتدا بررسی می کند که آیا یک برنده وجود دارد یا خیر و امتیاز مربوطه را برمی گرداند (-1 برای 'X' و 1 برای 'O').
+   - اگر تخته پر باشد، نمره 0 را برمی گرداند.
+   - اگر نوبت به هوش مصنوعی برسد (is_maximizing)، تمام حرکات ممکن را برای یافتن بهترین امتیاز ارزیابی می کند.
+   - اگر نوبت به بازیکن انسان برسد، امتیاز حرکات را محاسبه می کند تا امتیاز را به حداقل برساند.
 
-5. Defining the best_move Function
+5. تعریف تابع best_move
 ```python
 def best_move(board):
     best_val = float('-inf')
@@ -137,11 +137,11 @@ def best_move(board):
 
     return best_move
 ```
-   - This function finds the best move for the AI.
-   - It evaluates all possible moves (empty cells) to determine the best score using minimax.
-   - It returns the best move (as a tuple of row and column).
+   - این تابع بهترین حرکت را برای هوش مصنوعی پیدا می کند.
+   - تمام حرکات ممکن (سلول های خالی) را ارزیابی می کند تا بهترین امتیاز را با استفاده از Minimax تعیین کند.
+   - بهترین حرکت را برمی گرداند (به صورت چند تایی سطر و ستون).
 
-6. Defining the make_move Function
+6. تعریف تابع make_move
 ```python
 def make_move(row, col):
     if board[row][col] == ' ':
@@ -158,14 +158,14 @@ def make_move(row, col):
     else:
         messagebox.showerror("Error", "Invalid move")
 ```
-   - This function manages the player's move.
-   - It first checks if the cell is empty.
-   - If it is empty, it places 'X' in that cell and updates the display.
-   - It then checks if the player has won or if the board is full, displaying appropriate messages if needed.
-   - If the game continues, it calls the AI's move.
-   - If the cell is not empty, it shows an error message.
+   - این عملکرد حرکت بازیکن را مدیریت می کند.
+   - ابتدا بررسی می کند که سلول خالی است یا خیر.
+   - اگر خالی باشد، "X" را در آن سلول قرار می دهد و نمایشگر را به روز می کند.
+   - سپس بررسی می کند که آیا بازیکن برنده شده است یا اینکه تخته پر است و در صورت نیاز پیام های مناسب را نمایش می دهد.
+   - اگر بازی ادامه پیدا کند، حرکت هوش مصنوعی را صدا می کند.
+   - اگر سلول خالی نباشد پیغام خطا نشان می دهد.
 
-7. Defining the ai_move Function
+7. تعریف تابع ai_move
 ```python
 def ai_move():
     row, col = best_move(board)
@@ -178,11 +178,11 @@ def ai_move():
         messagebox.showinfo("Tic-Tac-Toe", "It's a draw!")
         root.quit()
 ```
-   - This function executes the AI's turn.
-   - It calculates the best move using best_move and places 'O' in the board.
-   - It checks if the AI has won or if the board is full, displaying the appropriate messages.
+   - این تابع نوبت هوش مصنوعی را اجرا می کند.
+   - بهترین حرکت را با استفاده از best_move محاسبه می کند و "O" را در تابلو قرار می دهد.
+   - بررسی می کند که آیا هوش مصنوعی برنده شده است یا اینکه تخته پر است و پیام های مناسب را نمایش می دهد.
 
-8. Creating and Running the GUI
+8. ایجاد و اجرای رابط کاربری گرافیکی
 ```python
 root = tk.Tk()
 root.title("Tic-Tac-Toe")
@@ -200,14 +200,14 @@ for i in range(3):
 
 root.mainloop()
 ```
-   - The main Tkinter window is created, and the title "Tic-Tac-Toe" is set.
-   - A 3x3 board is created to represent the game state.
-   - Buttons for each cell in the board are created, and clicking on them triggers the make_move function.
-   - root.mainloop() starts the main event loop, allowing the program to respond to user interactions.
+   - پنجره اصلی Tkinter ایجاد می شود و عنوان "Tic-Tac-Toe" تنظیم می شود.
+   - یک تابلو 3x3 برای نشان دادن وضعیت بازی ایجاد می شود.
+   - دکمه هایی برای هر سلول در برد ایجاد می شود و با کلیک بر روی آنها تابع make_move فعال می شود.
+   - root.mainloop() حلقه رویداد اصلی را شروع می کند و به برنامه اجازه می دهد به تعاملات کاربر پاسخ دهد.
 
-This code fully implements a Tic-Tac-Toe game with game logic and a graphical user interface, allowing a human player to compete against an AI.
+این کد به طور کامل یک بازی Tic-Tac-Toe را با منطق بازی و یک رابط کاربری گرافیکی پیاده سازی می کند و به بازیکن انسانی اجازه می دهد با یک هوش مصنوعی رقابت کند.
 
-# Python Code
+# کد پایتون
 ```python
 import tkinter as tk #provides a library of basic elements of GUI widgets
 from tkinter import messagebox #provides a different set of dialogues that are used to display message boxes
@@ -314,4 +314,3 @@ for i in range(3):
 
 root.mainloop()
 ```
-
