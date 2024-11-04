@@ -34,4 +34,106 @@
 3. تعامل کاربر: چندین دور و خروج با ورودی "خروج" اجازه می دهد.
 4. پیام nput Validationb یک پیام خطا برای ورودی نامعتبر نمایش می دهد.
 5. ساختار مدولار: کد قابل خواندن و ویرایش با توابع جداگانه.
-  
+
+
+ ## نحوه کار کد (تجزیه گام به گام):
+ 1. وترد کردن کتابخانه random:
+    - این خط از ماژول random استفاده می‌کند که ابزارهای لازم برای تولید اعداد یا انتخاب‌های تصادفی را فراهم می‌کند.
+```python
+import random
+```
+2.  تابع get_computer_choice:
+   - این تابع انتخاب کامپیوتر را به صورت تصادفی از بین گزینه‌های "سنگ"، "کاغذ"، و "قیچی" برمی‌گرداند. با استفاده از random.choice، یکی از عناصر لیست choices انتخاب و به عنوان خروجی این تابع برگردانده می‌شود.
+```python
+def get_computer_choice():
+    choices = ["rock", "paper", "scissors"]
+    return random.choice(choices)
+```
+3. تابع determine_winner:
+- این تابع نتیجه بازی را بر اساس انتخاب‌های بازیکن و کامپیوتر تعیین می‌کند:
+   - اگر هر دو انتخاب مشابه باشند، بازی مساوی است.
+   - اگر هر دو انتخاب مشابه باشند، بازی مساوی است.
+   - در غیر این صورت، کامپیوتر برنده می‌شود.
+
+```python
+def determine_winner(user_choice, computer_choice):
+    if user_choice == computer_choice:
+        return "It's a tie!"
+    elif (user_choice == "rock" and computer_choice == "scissors") or \
+         (user_choice == "paper" and computer_choice == "rock") or \
+         (user_choice == "scissors" and computer_choice == "paper"):
+        return "You win!"
+    else:
+        return "Computer wins!"
+```  
+4. تابع play_game:
+- این تابع بازی را اجرا می‌کند. مراحل آن به شرح زیر است:
+   - چاپ پیام خوش‌آمدگویی.
+   - ایجاد یک حلقه while برای اجرای چندباره بازی تا زمانی که کاربر "exit" را وارد کند.
+   - اگر ورودی کاربر "exit" باشد، بازی خاتمه می‌یابد و پیام خداحافظی چاپ می‌شود.
+   - اگر ورودی معتبر نباشد، پیام خطا چاپ و کاربر باید دوباره انتخاب کند.
+   - اگر ورودی معتبر باشد، کامپیوتر یک انتخاب تصادفی می‌کند و نتیجه بازی با استفاده از تابع determine_winner چاپ می‌شود.
+```python
+def play_game():
+    print("Welcome to Rock, Paper, Scissors!")
+    while True:
+        user_choice = input("Enter your choice (rock, paper, scissors, or exit): ")
+        if user_choice == "exit":
+            print("Game over. Goodbye!")
+            break
+        elif user_choice not in ["rock", "paper", "scissors"]:
+            print("Invalid input. Please try again.")
+            continue
+
+        computer_choice = get_computer_choice()
+        print(f"Computer's choice: {computer_choice}")
+        result = determine_winner(user_choice, computer_choice)
+        print(result)
+```
+5. شروع بازی با فراخوانی play_game:
+   - در نهایت، با فراخوانی تابع play_game، بازی آغاز می‌شود و اجرای آن از بخش قبلی به جریان می‌افتد.
+
+```python
+# Start the game
+play_game()
+```
+این کد به‌طور کامل یک بازی ساده "سنگ، کاغذ، قیچی" را شبیه‌سازی می‌کند که می‌توان آن را با وارد کردن ورودی‌ها در ترمینال انجام داد.
+
+# کد پایتون:
+```python
+import random
+
+def get_computer_choice():
+    choices = ["rock", "paper", "scissors"]
+    return random.choice(choices)
+
+def determine_winner(user_choice, computer_choice):
+    if user_choice == computer_choice:
+        return "It's a tie!"
+    elif (user_choice == "rock" and computer_choice == "scissors") or \
+         (user_choice == "paper" and computer_choice == "rock") or \
+         (user_choice == "scissors" and computer_choice == "paper"):
+        return "You win!"
+    else:
+        return "Computer wins!"
+
+def play_game():
+    print("Welcome to Rock, Paper, Scissors!")
+    while True:
+        user_choice = input("Enter your choice (rock, paper, scissors, or exit): ")
+        if user_choice == "exit":
+            print("Game over. Goodbye!")
+            break
+        elif user_choice not in ["rock", "paper", "scissors"]:
+            print("Invalid input. Please try again.")
+            continue
+
+        computer_choice = get_computer_choice()
+        print(f"Computer's choice: {computer_choice}")
+        result = determine_winner(user_choice, computer_choice)
+        print(result)
+
+# Start the game
+play_game()
+```
+ 
