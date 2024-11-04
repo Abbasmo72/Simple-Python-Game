@@ -6,7 +6,9 @@
 <hr>
 
 [Click to see the descriptions in Persian language](Persian.md)<br>
-Each section has a README file in English and Farsi in its respective file. By clicking on the links of each section, you can learn more in-depth information about the code and its function.
+Each section has a README file in English and Farsi in its respective file. By clicking on the links of each section, you can learn more in-depth information about the code and its function.<br>
+<b>Notice:</b> <b>Each of the following items and programs has a separate README file in English and Farsi. To know the function of each item, go to the README file of each part.</b>
+
 <hr>
 
 ### 1. Game Cows Bulls : 
