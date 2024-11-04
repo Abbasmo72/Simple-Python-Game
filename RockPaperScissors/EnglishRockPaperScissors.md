@@ -30,3 +30,11 @@ This code is a simple implementation of the classic "Rock, Paper, Scissors" game
    - For valid choices, the computer's choice is displayed, and the outcome of the game is printed based on the result from determine_winner.
 4. Game Start:
    - The game is started by calling play_game() at the end of the code, launching the main loop for user interaction.
+     
+### Key Features
+1. <b>Random Computer Choice:</b> Random selection of "rock," "paper," or "scissors" for the computer.
+2. <b>Winner Determination:</b> Determines the winner based on game rules, with an option for a tie.
+3. <b>User Interaction:</b> Allows multiple rounds and exits with "exit" input.
+4. <b>Input Validation:</b> Displays an error message for invalid input.
+5. <b>Modular Structure:</b> Readable and editable code with separate functions.
+
