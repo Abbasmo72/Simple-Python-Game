@@ -8,7 +8,7 @@
 [Click to see the descriptions in English language](EnglishRockPaperScissors.md)
 <hr>
 
-[کد پایتون](RockPaperScissors/RockPaperScissors.py)
+[کد پایتون](RockPaperScissors.py)
 ## مروری بر کد
 این کد یک پیاده سازی ساده از بازی کلاسیک "Rock, Paper, Scissors" در پایتون است. در اینجا به تفکیک هر بخش می پردازیم:
 1. تابع get_computer_choice:
