@@ -5,7 +5,7 @@
 </div>
 <hr>
 
-[Click to see the descriptions in Persian language](PersianRockPaperScissors.md)
+[Click to see the descriptions in Persian language](RockPaperScissors/PersianRockPaperScissors.md)
 <hr>
 
 [Python Code](RockPaperScissors/RockPaperScissors.py)
