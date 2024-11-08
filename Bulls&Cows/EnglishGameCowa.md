@@ -35,7 +35,7 @@ The provided code implements a text-based version of the "Bulls and Cows" game, 
 - At the end of the game, the player is informed if they guessed the number correctly or if they have run out of tries, along with the secret number.
 - This structured approach to coding allows for easy understanding and extensibility, making it an excellent example of how to implement game logic in Python.
 
-## How the Code Works (Step-by-Step Breakdown):
+## How the Code Works (Step-by-Step Breakdown)
 The provided code implements a "Bulls and Cows" game where a player tries to guess a randomly generated four-digit number without repeating digits. Here’s a detailed analysis of how the code functions step by step:
 
 1. <b>Import Required Module</b>
