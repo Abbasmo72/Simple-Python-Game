@@ -10,6 +10,7 @@
 
 ## Overview of the Code
 [Python Code](Tic-Tac-Toe/Tic-Tac-Toe.py)
+
 This Python code implements a simple graphical user interface (GUI) for a Tic-Tac-Toe game using the Tkinter library. The game allows a human player to play against an AI opponent. Here's an overview of the code, broken down into key components:
 
 1. Imports:
