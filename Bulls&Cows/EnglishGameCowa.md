@@ -5,7 +5,7 @@
 </div>
 <hr>
 
-[Click to see the descriptions in Persian language](Bulls&Cows/PersianGameCows.md)
+[Click to see the descriptions in Persian language](PersianGameCows.md)
 <hr>
 
 ## Overview of the Code
