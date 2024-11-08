@@ -5,7 +5,7 @@
 </div>
 <hr>
 
-[Click to see the descriptions in English language](README.md)
+[Click to see the descriptions in English language](EnglishGameCowa.md)
 <hr>
 
 ## بررسی اجمالی کد
