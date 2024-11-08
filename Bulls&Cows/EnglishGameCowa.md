@@ -34,26 +34,23 @@ The provided code implements a text-based version of the "Bulls and Cows" game, 
 ## How the Code Works (Step-by-Step Breakdown)
 The provided code implements a "Bulls and Cows" game where a player tries to guess a randomly generated four-digit number without repeating digits. Here’s a detailed analysis of how the code functions step by step:
 
-1. <b>Import Required Module</b>
+1. <b>Import Required Module:</b>
+	- The code begins by importing the random module, which is used to generate random numbers.
 ```python
 import random
 ```
-- The code begins by importing the random module, which is used to generate random numbers.
-
-2. <b>Function to Get Digits</b>
-   The code contains several functions that serve distinct purposes:<br>
+2. <b>Function to Get Digits:</b>
+- The code contains several functions that serve distinct purposes:<br>
    
-- <b>a. getDigits(num)</b>
-
+	- <b>a. getDigits(num)</b
  ```python
 def getDigits(num): 
     return [int(i) for i in str(num)]
 ```
-- Purpose: This function takes an integer num and converts it into a list of its individual digits.
-- Functionality: The number is first converted to a string, allowing iteration over each character. Each character is then converted back to an integer and returned as a list. For example, if num is 1234, the function returns [1, 2, 3, 4].
+- <b>Purpose:</b> This function takes an integer num and converts it into a list of its individual digits.
+- <b>Functionality:</b> The number is first converted to a string, allowing iteration over each character. Each character is then converted back to an integer and returned as a list. For example, if num is 1234, the function returns [1, 2, 3, 4].
 
-- <b>b. noDuplicates(num)</b>
- 
+	- <b>b. noDuplicates(num)</b>
 ```python
 def noDuplicates(num): 
     num_li = getDigits(num) 
@@ -62,11 +59,10 @@ def noDuplicates(num):
     else: 
         return False
 ```
-Purpose: This function checks whether a given number contains any duplicate digits.
-Functionality: It converts the number to a list of digits using getDigits(num) and then compares the length of this list to the length of the set created from it. Since sets cannot contain duplicates, a mismatch indicates duplicates exist. The function returns True if no duplicates are found, otherwise False.
-
-- <b>c. generateNum()</b>
-
+- <b>Purpose:</b> This function checks whether a given number contains any duplicate digits.
+- <b>Functionality:</b> It converts the number to a list of digits using getDigits(num) and then compares the length of this list to the length of the set created from it. Since sets cannot --contain duplicates, a mismatch indicates duplicates exist. The function returns True if no duplicates are found, otherwise False.
+  
+	- <b>c. generateNum()</b>
 ```python
 def generateNum(): 
     while True: 
@@ -74,11 +70,10 @@ def generateNum():
         if noDuplicates(num): 
             return num 
 ```
-Purpose: This function generates a random four-digit number that has no repeated digits.
-Functionality: It repeatedly generates a random integer between 1000 and 9999. For each generated number, it checks for duplicates using noDuplicates(num). Once a valid number is found, it returns that number.
+- <b>Purpose:</b> This function generates a random four-digit number that has no repeated digits.
+- <b>Functionality:</b> It repeatedly generates a random integer between 1000 and 9999. For each generated number, it checks for duplicates using noDuplicates(num). Once a valid number is found, it returns that number.
 
-- <b>d. numOfBullsCows(num, guess)</b>
-
+	- <b>d. numOfBullsCows(num, guess)</b>
  ```python
 def numOfBullsCows(num, guess): 
     bull_cow = [0, 0] 
@@ -94,7 +89,7 @@ def numOfBullsCows(num, guess):
 
     return bull_cow 
 ```
-<b>Purpose:</b> This function calculates the number of bulls and cows between the secret number (num) and the player's guess (guess).
+- <b>Purpose:</b> This function calculates the number of bulls and cows between the secret number (num) and the player's guess (guess).
 
 <b>Functionality:</b>
 It initializes a list bull_cow to keep track of bulls (correct digit in the correct position) and cows (correct digit in the wrong position).
@@ -102,18 +97,14 @@ The digits of both the secret number and the guess are extracted using getDigits
 The function then iterates through the digits of both lists. For each digit, it checks if the digit in the guess is present in the secret number.
 If a digit matches in both value and position, it is counted as a bull; if it matches in value only, it is counted as a cow.
 Finally, the function returns the counts of bulls and cows.
-
-3. <b>Game Initialization</b>
-
+3. <b>Game Initialization:</b>
+	- <b>Purpose:</b> The game begins by generating a secret number using generateNum(). The player is prompted to enter the number of attempts they wish to have to guess the number, and a counter (count) is initialized to keep track of the number of guesses made.
 ```python
 num = generateNum() 
 tries = int(input('Enter number of tries: ')) 
 count = 0
 ```
-<b>Purpose:</b> The game begins by generating a secret number using generateNum(). The player is prompted to enter the number of attempts they wish to have to guess the number, and a counter (count) is initialized to keep track of the number of guesses made.
-
-4. <b>Game Loop</b>
-
+4. <b>Game Loop:</b>
 ```python
 while tries > 0: 
     guess = int(input("Enter your guess: ")) 
@@ -140,14 +131,12 @@ print(f'The number is a guess {count}')
 ```
 
 5. <b>Conclusion:</b>
-   
-    This implementation of the Bulls and Cows game showcases several important programming concepts, such as:<br>
-	Functions: Encapsulating behavior into reusable blocks.<br>
-	Loops: Using loops to allow for repeated interaction until a condition is met.<br>
-	Conditionals: Implementing conditional logic to guide the flow of the program based on user input and game rules.
+	- This implementation of the Bulls and Cows game showcases several important programming concepts, such as:<br>
+		- Functions: Encapsulating behavior into reusable blocks.<br>
+ 		- Loops: Using loops to allow for repeated interaction until a condition is met.<br>
+		- Conditionals: Implementing conditional logic to guide the flow of the program based on user input and game rules.
 
 ## Potential Improvements
-
 User Interface: The game could be improved with a graphical user interface (GUI) to enhance user experience.<br>
 Scoring System: Implementing a scoring system based on the number of tries could add an additional layer of competition.<br>
 Multiple Difficulty Levels: Introducing varying lengths of numbers (e.g., 3, 4, or 5 digits) could cater to players of different skill levels.<br>
@@ -156,7 +145,6 @@ Game History: Keeping track of previous guesses and providing feedback could fur
 ## Libraries Used
 random: For generating random numbers.<br>
 json: While the json library is imported, it is not utilized in this code. It could be useful if you plan to extend the game to save or load game states.<br>
-
 This detailed analysis can be used for documentation or uploading to GitHub, helping users understand the code's structure, functionality, and potential enhancements.
 
 ## Python Code
