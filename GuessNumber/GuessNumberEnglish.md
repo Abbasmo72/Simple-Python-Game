@@ -1,7 +1,7 @@
 <div align="center">
 
-# Tic Tac Toe
-<img alt="Gif" src="https://i.pinimg.com/originals/3b/f2/f4/3bf2f45865bc4a63a663611ea357de4c.gif" height="250px" width="350px">
+# Guess Number
+<img src="https://media2.giphy.com/media/kuofpmsWLJxTk2oDaS/200w.gif?cid=6c09b9522jzqy0ngpj5tjq31iilcgr834755ckwurnwn2jcw&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="Image Description" width="30%">
 </div>
 <hr>
 
