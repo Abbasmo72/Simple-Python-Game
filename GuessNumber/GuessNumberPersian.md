@@ -8,7 +8,7 @@
 [Click to see the descriptions in Persian language](GuessNumberEnglish.md)
 <hr>
 
-[Python Code](GuessNumberPersian.py)
+[کد پایتون](GuessNumberPersian.py)
 
 
 ## مروری بر کد
