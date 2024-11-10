@@ -31,3 +31,9 @@
 
 برای مشاهده فایل <b>[English README.md](RockPaperScissors/EnglishRockPaperScissors.md)</b> و <b>[Persian README.md](RockPaperScissors/PersianRockPaperScissors.md)</b> کد کامل بازی <b>[Python Code](RockPaperScissors/RockPaperScissors.py)</b>.
 <hr>
+
+### 4. حدس عدد:
+این کد یک بازی حدس عدد را پیاده‌سازی می‌کند که در آن کاربر باید عددی بین ۱ تا ۱۰۰ را حدس بزند. ابتدا نام کاربر پرسیده شده و سپس حدس اولیه از او دریافت می‌شود. یک عدد تصادفی به عنوان پاسخ صحیح انتخاب می‌شود. در حلقه‌ای تکرار می‌شود تا زمانی که حدس کاربر با عدد صحیح برابر شود، و در هر مرحله مشخص می‌شود که حدس کاربر بزرگتر یا کوچکتر از جواب است. پس از حدس درست، تعداد دفعات حدس و پیام تبریک نمایش داده می‌شود.
+
+برای مشاهده فایل <b>[English README.md](GuessNumber/GuessNumberEnglish.md)</b> و <b>[Persian README.md](GuessNumber/GuessNumberPersian.md)</b> کد کامل بازی <b>[Python Code](GuessNumber/GuessNumberEnglish.py)</b>.
+<hr>
