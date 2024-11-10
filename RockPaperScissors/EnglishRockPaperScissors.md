@@ -8,7 +8,7 @@
 [Click to see the descriptions in Persian language](PersianRockPaperScissors.md)
 <hr>
 
-[Python Code](RockPaperScissors.py)
+[Python Code](RockPaperScissorsEnglish.py)
 ## Overview of the Code
 This code is a simple implementation of the classic "Rock, Paper, Scissors" game in Python. Here's a breakdown of each part:
 
