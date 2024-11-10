@@ -5,7 +5,7 @@
 </div>
 <hr>
 
-[Click to see the descriptions in Persian language](GuessNumberٍEnglish.md)
+[Click to see the descriptions in Persian language](GuessNumberEnglish.md)
 <hr>
 
 [Python Code](GuessNumberPersian.py)
