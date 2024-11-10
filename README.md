@@ -30,3 +30,9 @@ The game is also interesting from a psychological perspective, as players someti
 
 To view the file <b>[English README.md](RockPaperScissors/EnglishRockPaperScissors.md)</b> and <b>[Persian README.md](RockPaperScissors/PersianRockPaperScissors.md)</b> The full code of the game <b>[Python Code](RockPaperScissors/RockPaperScissors.py)</b>.
 <hr>
+
+### 4. Guess Number:
+This code implements a number-guessing game where the user must guess a number between 1 and 100. First, the user's name is requested, and then an initial guess is taken. A random number is generated as the correct answer. A loop runs until the user’s guess matches the correct answer, and in each step, feedback is provided on whether the guess is higher or lower than the answer. Once the correct guess is made, the total number of attempts and a congratulatory message are displayed.
+
+To view the file <b>[English README.md](GuessNumber/GuessNumberEnglish.md)</b> and <b>[Persian README.md](GuessNumber/GuessNumberPersian.md)</b> The full code of the game <b>[Python Code](GuessNumber/GuessNumberEnglish.py)</b>.
+<hr>
