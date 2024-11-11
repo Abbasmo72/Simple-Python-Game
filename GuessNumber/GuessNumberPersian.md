@@ -91,7 +91,7 @@ print(f'Congratulations, {name}! The correct number was {answer}. It took you {g
 
 این توضیح گام‌به‌گام، نحوه‌ی پیشروی کد را از ابتدا تا پایان به طور کامل روشن می‌کند.
 
-## کد پایتون:
+## کد پایتون
 ```python
 import random
 import time
