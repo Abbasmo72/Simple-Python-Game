@@ -1,7 +1,7 @@
 <div align="center">
 
-# بازی های ساده با پایتون
-<img alt="Gif" src="https://media3.giphy.com/media/coxQHKASG60HrHtvkt/giphy.gif" height="250px" width="500px">
+# Simple Games with Python
+<img alt="Gif" src="https://media.tenor.com/ZRTg_XwBLEQAAAAM/game-sports.gif" height="250px" width="250px">
 </div>
 <hr>
 
