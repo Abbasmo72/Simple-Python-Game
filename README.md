@@ -38,5 +38,7 @@ To view the file <b>[English README.md](GuessNumber/GuessNumberEnglish.md)</b> a
 <hr>
 
 ### 5.Snake:
+The Pygame library is initialized, and colors, screen size, and game speed are set. A game window is created with a specified size and the title "Snake Game" is assigned. Functions are defined to draw the snake, display messages, and render the grid on the screen. Variables are initialized, including the snake's initial position and food placement, and the main game loop starts. In this loop, user inputs (such as arrow key presses) are processed to control the snake's movement. If the snake collides with the wall or itself, the game stops, and a "Game Over" screen is displayed. The snake's position, food, and score are updated, and all elements are redrawn on the screen. The game's speed is controlled, and the game exits if the window is closed.
 
+To view the file <b>[English README.md](Snake/GuessNumberEnglish.md)</b> and <b>[Persian README.md](Snake/GuessNumberPersian.md)</b> The full code of the game <b>[Python Code](Snake/GuessNumberEnglish.py)</b>.
 <hr>
