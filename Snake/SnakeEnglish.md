@@ -126,4 +126,8 @@ show_message("Exit", BLACK, [WIDTH / 2 + 30, HEIGHT / 2 + 10])
 📌 Multiplayer Mode – Allow two players to control different snakes.<br>
 ## Conclusion
 This project provides a fun and engaging Snake Game using Python and Pygame. The game successfully integrates movement mechanics, collision detection, and score tracking. Future improvements can make the game even more exciting! 🚀
+## Python Code
+```python
+
+```
 
