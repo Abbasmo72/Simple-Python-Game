@@ -20,3 +20,4 @@ This project is a simple implementation of the classic Snake Game using Python a
 ✅ Dynamic Food Placement – The food appears at random positions after being eaten.<br>
 ✅ Grid-Based Movement – The snake moves in fixed blocks for better control.<br>
 ✅ Border Collision Detection – Ends the game when the snake hits the boundaries.<br>
+## Code Breakdown
