@@ -110,3 +110,12 @@ if x == food_x and y == food_y:
 ```
 - When the snake eats food, it grows and the score increases.
 ## Game Over Screen
+When the game ends, a retry and exit option appears.
+```python
+pygame.draw.rect(screen, GREEN, [WIDTH / 3, HEIGHT / 2, 100, 50])
+pygame.draw.rect(screen, RED, [WIDTH / 2, HEIGHT / 2, 100, 50])
+show_message("Retry", BLACK, [WIDTH / 3 + 20, HEIGHT / 2 + 10])
+show_message("Exit", BLACK, [WIDTH / 2 + 30, HEIGHT / 2 + 10])
+```
+- Clicking Retry restarts the game.
+- Clicking Exit closes the application.
