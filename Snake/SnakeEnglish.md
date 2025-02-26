@@ -43,3 +43,18 @@ SPEED = 7  # Adjusted snake speed
 - The BLOCK_SIZE determines the size of each segment of the snake.
 - SPEED controls the movement speed of the snake.
 ### 2. Drawing Functions
+The game includes functions to draw the snake, display messages, and render the grid.
+```python
+def draw_snake(block_size, snake_list):
+    for block in snake_list:
+        pygame.draw.rect(screen, BLACK, [block[0], block[1], block_size, block_size])
+```
+- This function iterates through snake_list and draws each segment on the screen.
+```python
+def draw_grid():
+    for x in range(0, WIDTH, BLOCK_SIZE):
+        pygame.draw.line(screen, GRAY, (x, 0), (x, HEIGHT))
+    for y in range(0, HEIGHT, BLOCK_SIZE):
+        pygame.draw.line(screen, GRAY, (0, y), (WIDTH, y))
+```
+- A grid is drawn to visually align the snake's movement with the screen.
