@@ -58,3 +58,55 @@ def draw_grid():
         pygame.draw.line(screen, GRAY, (0, y), (WIDTH, y))
 ```
 - A grid is drawn to visually align the snake's movement with the screen.
+### 3. Main Game Loop
+The game_loop() function is the core of the game, handling movement, collision detection, and game logic.
+```python
+while not game_over:
+```
+- The game continuously runs until game_over is set to True.
+
+Handling Keyboard Inputs
+```python
+elif event.type == pygame.KEYDOWN:
+    if event.key == pygame.K_LEFT:
+        x_change = -BLOCK_SIZE
+        y_change = 0
+    elif event.key == pygame.K_RIGHT:
+        x_change = BLOCK_SIZE
+        y_change = 0
+    elif event.key == pygame.K_UP:
+        y_change = -BLOCK_SIZE
+        x_change = 0
+    elif event.key == pygame.K_DOWN:
+        y_change = BLOCK_SIZE
+        x_change = 0
+```
+- The snake moves left, right, up, or down based on the arrow keys.
+
+Collision with Borders
+```python
+if x >= WIDTH or x < 0 or y >= HEIGHT or y < 0:
+    game_close = True
+```
+- If the snake moves out of bounds, the game ends.
+
+Collision with Itself
+```python
+for segment in snake_list[:-1]:
+    if segment == snake_head:
+        game_close = True
+```
+- If the snake collides with itself, the game ends.
+
+Food Consumption
+```python
+if x == food_x and y == food_y:
+    food_x = round(random.randrange(0, WIDTH - BLOCK_SIZE) / 10.0) * 10.0
+    food_y = round(random.randrange(0, HEIGHT - BLOCK_SIZE) / 10.0) * 10.0
+    snake_length += 1
+    score += 10
+    if score > best_score:
+        best_score = score
+```
+- When the snake eats food, it grows and the score increases.
+## Game Over Screen
