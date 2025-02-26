@@ -21,3 +21,25 @@ This project is a simple implementation of the classic Snake Game using Python a
 ✅ Grid-Based Movement – The snake moves in fixed blocks for better control.<br>
 ✅ Border Collision Detection – Ends the game when the snake hits the boundaries.<br>
 ## Code Breakdown
+### 1. Initializing Pygame & Defining Constants
+At the beginning of the script, Pygame is initialized, and essential colors, screen dimensions, and snake properties are set.
+```python
+pygame.init()
+
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (213, 50, 80)
+GREEN = (0, 255, 0)
+BLUE = (50, 153, 213)
+GRAY = (200, 200, 200)
+BORDER_COLOR = (150, 0, 0)
+
+WIDTH = 600
+HEIGHT = 400
+BLOCK_SIZE = 10
+SPEED = 7  # Adjusted snake speed
+```
+- The game screen size is 600x400 pixels.
+- The BLOCK_SIZE determines the size of each segment of the snake.
+- SPEED controls the movement speed of the snake.
+### 2. Drawing Functions
