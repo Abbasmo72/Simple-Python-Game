@@ -42,3 +42,19 @@ SPEED = 7  # سرعت حرکت مار
 - تعیین BLOCK_SIZE اندازه هر بخش از بدن مار را مشخص می‌کند.
 - تعیین SPEED سرعت حرکت مار را تعیین می‌کند.
 
+۲. توابع ترسیم مار و صفحه بازی
+چند تابع برای کشیدن مار، نمایش پیام‌ها و ترسیم شبکه بازی تعریف شده‌اند.
+```python
+def draw_snake(block_size, snake_list):
+    for block in snake_list:
+        pygame.draw.rect(screen, BLACK, [block[0], block[1], block_size, block_size])
+```
+- این تابع با استفاده از snake_list تمام بخش‌های مار را روی صفحه نمایش می‌دهد.
+```python
+def draw_grid():
+    for x in range(0, WIDTH, BLOCK_SIZE):
+        pygame.draw.line(screen, GRAY, (x, 0), (x, HEIGHT))
+    for y in range(0, HEIGHT, BLOCK_SIZE):
+        pygame.draw.line(screen, GRAY, (0, y), (WIDTH, y))
+```
+- این تابع یک شبکه را روی صفحه رسم می‌کند تا حرکت مار دقیق‌تر شود.
