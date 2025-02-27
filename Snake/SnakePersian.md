@@ -114,3 +114,15 @@ if x == food_x and y == food_y:
     - طول آن افزایش می‌یابد.
     -  امتیاز بازی بیشتر می‌شود.
     -  بهترین امتیاز ذخیره می‌شود.
+## صفحه پایان بازی
+وقتی بازی تمام می‌شود، دو گزینه شروع مجدد (Retry) و خروج (Exit) نمایش داده می‌شود.
+```python
+pygame.draw.rect(screen, GREEN, [WIDTH / 3, HEIGHT / 2, 100, 50])
+pygame.draw.rect(screen, RED, [WIDTH / 2, HEIGHT / 2, 100, 50])
+show_message("Retry", BLACK, [WIDTH / 3 + 20, HEIGHT / 2 + 10])
+show_message("Exit", BLACK, [WIDTH / 2 + 30, HEIGHT / 2 + 10])
+```
+- اگر کاربر روی Retry کلیک کند، بازی از ابتدا شروع می‌شود.
+- اگر روی Exit کلیک کند، بازی بسته می‌شود.
+## 
+
