@@ -58,3 +58,59 @@ def draw_grid():
         pygame.draw.line(screen, GRAY, (0, y), (WIDTH, y))
 ```
 - این تابع یک شبکه را روی صفحه رسم می‌کند تا حرکت مار دقیق‌تر شود.
+  
+۳. حلقه اصلی بازی
+تابع game_loop() وظیفه مدیریت حرکت مار، تشخیص برخوردها و منطق کلی بازی را برعهده دارد.
+```python
+while not game_over:
+```
+- تا زمانی که بازی تمام نشده، حلقه اجرا می‌شود.
+- 
+دریافت ورودی‌های صفحه‌کلید
+```python
+elif event.type == pygame.KEYDOWN:
+    if event.key == pygame.K_LEFT:
+        x_change = -BLOCK_SIZE
+        y_change = 0
+    elif event.key == pygame.K_RIGHT:
+        x_change = BLOCK_SIZE
+        y_change = 0
+    elif event.key == pygame.K_UP:
+        y_change = -BLOCK_SIZE
+        x_change = 0
+    elif event.key == pygame.K_DOWN:
+        y_change = BLOCK_SIZE
+        x_change = 0
+```
+- با فشردن کلیدهای جهت‌دار، جهت حرکت مار تغییر می‌کند.
+
+تشخیص برخورد با دیوارها
+```python
+if x >= WIDTH or x < 0 or y >= HEIGHT or y < 0:
+    game_close = True
+```
+- اگر مار از صفحه خارج شود، بازی پایان می‌یابد.
+
+تشخیص برخورد با خود مار
+```python
+for segment in snake_list[:-1]:
+    if segment == snake_head:
+        game_close = True
+```
+- اگر مار به خودش برخورد کند، بازی به پایان می‌رسد.
+
+خوردن غذا و افزایش امتیاز
+
+```python
+if x == food_x and y == food_y:
+    food_x = round(random.randrange(0, WIDTH - BLOCK_SIZE) / 10.0) * 10.0
+    food_y = round(random.randrange(0, HEIGHT - BLOCK_SIZE) / 10.0) * 10.0
+    snake_length += 1
+    score += 10
+    if score > best_score:
+        best_score = score
+```
+- اگر مار غذا بخورد:
+    - طول آن افزایش می‌یابد.
+    -  امتیاز بازی بیشتر می‌شود.
+    -  بهترین امتیاز ذخیره می‌شود.
